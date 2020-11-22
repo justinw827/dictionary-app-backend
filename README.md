@@ -1,2 +1,3 @@
-# dictionary-app-backend
- 
+## Instructions to start
+
+### npm install && npm start
