@@ -1,4 +1,3 @@
-import mongoose from 'mongoose'; 
 import favorite from '../models/Favorite.js';
 
 exports.getAllFavorites = (req, res) => {

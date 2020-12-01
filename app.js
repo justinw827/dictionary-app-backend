@@ -8,18 +8,9 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors())
-
-/**
-    * Connect to the database
-    */
-
 mongoose.connect('mongodb://localhost', { useNewUrlParser: true, useUnifiedTopology: true }, () => mongoose.connection.db.dropDatabase());
 
-/**
-    * Middleware
-    */
-
-// app.use(bodyParser.urlencoded({ extended: true }));
+// Middleware
 app.use(bodyParser.json());
 
 // catch 400
@@ -36,10 +27,7 @@ app.use((err, req, res, next) => {
     next();
 });
 
-/**
-    * Register the routes
-    */
-
+// Register routes
 routes(app);
 
 export default app;
